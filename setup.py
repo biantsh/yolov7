@@ -1,7 +1,7 @@
 import glob
 import setuptools
 
-VERSION = '2022.01.06.003'
+VERSION = '2022.01.06.004'
 
 
 def setup():
