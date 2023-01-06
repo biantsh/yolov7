@@ -1,9 +1,7 @@
 import glob
-import os
 import setuptools
-import shutil
 
-VERSION = '2022.01.06.002'
+VERSION = '2022.01.06.003'
 
 
 def setup():
@@ -20,15 +18,6 @@ def setup():
             name='yolov7-wky',
             scripts=glob.glob('*.py')
         )
-
-        # Remove installation artifacts
-        build_path = '../yolov7-wky/build/'
-        if os.path.exists(build_path):
-            shutil.rmtree(build_path)
-
-        egg_info_path = '../yolov7-wky/yolov7.egg-info'
-        if os.path.exists(egg_info_path):
-            shutil.rmtree(egg_info_path)
 
 
 if __name__ == '__main__':
