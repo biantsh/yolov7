@@ -1,0 +1,10 @@
+# YoloV7
+
+A packaged version of the yolov7 implementation by Wong Kin Yiu:
+https://github.com/WongKinYiu/yolov7
+
+# Example usage
+
+After installation, import with `import yolov7`. To import a module, such as
+`models` or `utils`, you can do: `import yolov7.models` and `yolov7.utils`
+respectively.

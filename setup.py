@@ -3,7 +3,7 @@ import os
 import setuptools
 import shutil
 
-VERSION = '2022.01.06'
+VERSION = '2022.01.06.002'
 
 
 def setup():
@@ -17,16 +17,16 @@ def setup():
             include_package_data=True,
             author='biantsh',
             version=VERSION,
-            name='yolov7',
+            name='yolov7-wky',
             scripts=glob.glob('*.py')
         )
 
         # Remove installation artifacts
-        build_path = '../yolov7/build/'
+        build_path = '../yolov7-wky/build/'
         if os.path.exists(build_path):
             shutil.rmtree(build_path)
 
-        egg_info_path = '../yolov7/yolov7.egg-info'
+        egg_info_path = '../yolov7-wky/yolov7.egg-info'
         if os.path.exists(egg_info_path):
             shutil.rmtree(egg_info_path)
 
