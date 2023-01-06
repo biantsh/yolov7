@@ -1,7 +1,7 @@
 import glob
 import setuptools
 
-VERSION = '2022.01.06.005'
+VERSION = '2022.01.06.006'
 
 requirements = [
     'matplotlib>=3.2.2'
@@ -25,7 +25,7 @@ requirements = [
 
 
 def setup():
-    with open('README.dst') as f:
+    with open('yolov7/README.dst') as f:
         long_description = f.read()
 
     setuptools.setup(
