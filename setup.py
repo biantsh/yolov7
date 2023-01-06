@@ -25,9 +25,6 @@ requirements = [
 
 
 def setup():
-    with open('yolov7/README.dst') as f:
-        long_description = f.read()
-
     setuptools.setup(
         packages=setuptools.find_packages(),
         install_requires=requirements,
@@ -36,9 +33,7 @@ def setup():
         author='biantsh',
         version=VERSION,
         name='yolov7-wky',
-        scripts=glob.glob('*.py'),
-        long_description=long_description,
-        long_description_content_type="text/markdown"
+        scripts=glob.glob('*.py')
     )
 
 
