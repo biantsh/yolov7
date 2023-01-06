@@ -1,7 +1,7 @@
 import glob
 import setuptools
 
-VERSION = '2022.01.06.006'
+VERSION = '2022.01.06.007'
 
 requirements = [
     'matplotlib>=3.2.2'
