@@ -1,7 +1,7 @@
 import setuptools
 from pathlib import Path
 
-VERSION = '2023.01.09.1'
+VERSION = '2023.01.09.2'
 
 requirements = [
     'flatbuffers==23.1.4',
