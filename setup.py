@@ -1,7 +1,7 @@
 import setuptools
 from pathlib import Path
 
-VERSION = '2023.01.09.2'
+VERSION = '2023.01.09.3'
 
 requirements = [
     'flatbuffers==23.1.4',
@@ -26,8 +26,8 @@ requirements = [
     'thop'
 ]
 
-this_directory = Path(__file__).parent
-long_description = (this_directory / "README.dst").read_text()
+current_dir = Path(__file__).parent
+long_description = (current_dir / "README.dst").read_text()
 
 
 def setup():
