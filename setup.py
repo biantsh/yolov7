@@ -1,9 +1,12 @@
-import glob
 import setuptools
+from pathlib import Path
 
 VERSION = '2023.01.06.10'
 
 requirements = [
+    'flatbuffers==23.1.4',
+    'onnxsim==0.4.13',
+    'tensorflow_probability==0.16.0',
     'matplotlib>=3.2.2',
     'numpy>=1.18.5,<1.24.0',
     'opencv-python>=4.1.1',
@@ -23,17 +26,31 @@ requirements = [
     'thop'
 ]
 
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.dst").read_text()
+
 
 def setup():
     setuptools.setup(
         packages=setuptools.find_packages(),
+        include_package_data=True,
         install_requires=requirements,
         python_requires='>=3.10',
-        include_package_data=True,
         author='biantsh',
         version=VERSION,
         name='yolov7-wky',
-        scripts=glob.glob('*.py')
+        long_description=long_description,
+        long_description_content_type='text/markdown',
+        entry_points={
+            'console_scripts': [
+                'yolov7_detect=python_scripts.detect:main',
+                'yolov7_export=python_scripts.export:main',
+                'yolov7_hubconf=python_scripts.hubconf:main',
+                'yolov7_test=python_scripts.test:main',
+                'yolov7_train=python_scripts.train:main',
+                'yolov7_train_aux=python_scripts.train_aux:main'
+            ],
+        },
     )
 
 
